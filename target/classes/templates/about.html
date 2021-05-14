@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>关于我</title>
+	<link rel="stylesheet" href="../static/lib/semanticui/semantic.min.css" />
+	<link rel="stylesheet" href="../static/css/me.css"/>
+</head>
+<body>
+	<!-- 网页网格划分16格 -->
+	<!-- 导航 -->
+	<nav th:replace="_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+		<!-- 容器 -->
+		<div class="ui container">
+			<div class="ui inverted secondary stackable menu">
+				<h2 class="ui teal header item">Blog</h2>
+				<a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+				<a href="#" class="active m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+				<!-- 搜索框 -->
+				<div class="right m-item item m-mobile-hide">
+					<!-- 透明：transparent -->
+					<!-- 反转：inverted -->
+					<div class="ui icon inverted transparent input">
+						<input type="text" placeholder="Search...." />
+						<i class="search link icon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 加个图标，为了响应手机端 -->
+		<!-- 加上menu toggle这两个属性只是为了让jQuery获取该按钮，并没有显示上的区别 -->
+		<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+			<i class="sidebar icon"></i>
+		</a>
+	</nav>
+
+    <!-- 中间内容 -->
+	<div class="m-container m-padded-tb-big">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<div class="eleven wide column">
+					<div class="ui segment">
+						<img src="https://unsplash.it/800/600?image=1005" alt="" class="ui rounded image">
+					</div>
+				</div>	
+				<div class="five wide column">
+					<div class="ui top attached segment">
+						<div class="ui header">关于我</div>
+					</div>
+					<div class="ui attached segment">
+						<p class="m-text">刘志鹏，一个独立开发者，折腾在 0 和 1 世界的弟弟：一个终身学习者，誓将学习无限循环，希望结识可以共同成长的小伙伴。</p>
+						<p class="m-text">热爱编程，喜欢折腾，正在探索高效学习编程技术的方法...</p>
+					</div>
+					<div class="ui attached segment">
+						<div class="ui orange basic left pointing label">编程</div>
+						<div class="ui orange basic left pointing label">羽毛球</div>
+						<div class="ui orange basic left pointing label">思考</div>
+						<div class="ui orange basic left pointing label">追老剧</div>
+					</div>
+					<div class="ui attached segment">
+						<div class="ui teal basic left pointing label m-margin-tb-tiny">Java</div>
+						<div class="ui teal basic left pointing label m-margin-tb-tiny">JavaScript</div>
+						<div class="ui teal basic left pointing label m-margin-tb-tiny">Springboot</div>
+						<div class="ui teal basic left pointing label m-margin-tb-tiny">MySQL</div>
+						<div class="ui teal basic left pointing label m-margin-tb-tiny">Semantic UI</div>
+						<div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
+					</div>
+					<div class="ui bottom attached segment">
+						<a href="#" th:href="@{https://github.com/1471591945}" class="ui circular icon button"><i class="github icon"></i></a>
+						<a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
+						<a href="#" class="ui qq circular icon button" data-content="1471591945" data-position="bottom center"><i class="qq icon"></i></a>
+					</div>
+					<div class="ui wechat-qr flowing popup transition hidden m-padded-mini" style="width: 130px !important;">
+						<img src="../static/images/weixin.png" th:src="@{/images/weixin.png}" alt="" class="ui rounded image" style="width: 120px;">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<!-- 底部 -->
+	<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+		<!-- 居中：aligned -->
+		<!-- 垂直：vertical -->
+		<div class="ui center aligned container">
+			<div class="ui inverted divided stackable grid">
+				<div class="three wide column">
+					<div class="ui inverted link list">
+						<div class="item">
+							<img src="../static/images/weixin.png" class="ui rounded image" alt="" style="width: 100px;">
+						</div>
+					</div>
+				</div>
+				<div class="three wide column">
+					<!-- 标题 -->
+					<h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">用户故事（User Story）</a>
+						<a href="#" class="item">关于刻意练习的清单</a>
+						<a href="#" class="item">失败要趁早</a>
+					</div>
+				</div>
+				<div class="three wide column">
+					<!-- 标题 -->
+					<h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">Email：1471591945@qq.com</a>
+						<a href="#" class="item">QQ：1471591945</a>
+					</div>
+				</div>
+				<div class="seven wide column">
+					<!-- 标题 -->
+					<h4 class="ui inverted header m-text-thin m-text-spaced">Lirenmi</h4>
+					<p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助....</p>
+				</div>
+			</div>
+			<div class="ui inverted section divider"></div>
+			<p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright &copy; 2020 - 2021 Lirenmi Designed by Lirenmi</p>
+		</div>
+	</footer>
+
+	<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+	<script type="text/javascript" src="../static/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/lib/semanticui/semantic.min.js"></script>
+	<!--/*/</th:block>/*/-->
+
+<script type="text/javascript">
+	$(".menu.toggle").click(function () {
+		// toggleClass方法可以将指定jQuery对象的指定css样式进行有无切换（即有就变成无，无变成有）
+		$(".m-item").toggleClass('m-mobile-hide');
+	});
+
+	$(".wechat").popup({
+		popup : $(".wechat-qr"),
+		width : "100%",
+		position : "bottom center"
+	});
+
+	// 点击赞赏按钮弹出二维码支付图片
+	$(".qq").popup();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+spring:
+  thymeleaf:
+    mode: HTML
+    cache: false
+  # 指定活跃的配置文件
+  profiles:
+    active: dev
+
+
+comment.avatar: /images/avatar.png
+

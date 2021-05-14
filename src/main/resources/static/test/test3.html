@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<a href="https://www.baidu.com" onclick="return check()">百度</a>
+<script type="text/javascript">
+	function check() {
+		var flag = confirm("确认去百度？")
+		if (flag) {
+			return true;
+		}
+		return false;
+	}
+</script>
+</body>
+</html>
